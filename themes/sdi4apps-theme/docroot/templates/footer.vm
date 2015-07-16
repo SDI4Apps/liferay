@@ -1,0 +1,99 @@
+<footer id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div id="text-7" class="widget-wrapper widget_text">
+                    <div class="footer-title">
+                        <h4>Partners:</h4>
+                    </div>
+                    <div class="textwidget">
+                        <p>
+                            <a href="http://www.avinet.no/">Asplan Viak Internet AS</a> (NO)<br>
+                            <a href="http://bosc.lv/">Baltic Open Solutions Center</a> (LV)<br>
+                            <a href="http://www.ccss.cz/">Czech Centre for Science and Society</a> (CZ)<br>
+                            <a href="http://www.e-pro.sk/">e-Pro Group AS</a> (SK)<br>
+                            <a href="http://www.erfc.gr/">European Regional Framework for Co-operation</a> (GR)<br>
+                            <a href="http://www.bnhelp.cz/">Help service remote sensing s.r.o.</a> (CZ)<br>
+                            <a href="http://www.hyperborea.com/">Hyperborea S.r.l.</a> (IT)<br>
+                            <a href="http://www.muni.cz/">Masaryk University</a> (CZ)<br>
+                            <a href="http://www.ozpronatur.sk/en/">Pronatur</a> (SK)<br>
+                            <a href="http://www.talos-rtd.com/">RTD Talos Limited</a> (CY)
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div id="text-8" class="widget-wrapper widget_text">
+                    <div class="footer-title">
+                        <h4>Partners:</h4>
+                    </div>
+                    <div class="textwidget">
+                        <p>
+                            <a href="http://www.sssup.it/">Scuola Superiore Sant’Anna</a> (IT)<br>
+                            <a href="http://www.sazp.sk/">Slovak Environmental Agency</a> (SK)<br>
+                            <a href="http://www.stepim.it/">STEPIM - Strategie Strutturali di Antonio Paterno’ &amp; c. sas</a> (IT)<br>
+                            <a href="http://www.mac.ie/">The National Microelectronics Applications Centre Ltd</a> (IE)<br>
+                            <a href="http://www.uhlava.cz/">Uhlava</a> (CZ)<br>
+                            <a href="http://www.zcu.cz/en/">University of West Bohemia in Pilsen</a> (CZ)<br>
+                            <a href="http://www.vidzeme.lv/en/">Vidzeme Planning Region</a> (LV)<br>
+                            <a href="http://www.zemgale.lv/eng/">Zemgale Planning Region</a> (LV)
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+               <div id="text-6" class="widget-wrapper widget_text">
+                    <div class="footer-title">
+                        <h4>Share on:</h4>
+                    </div>
+                    <div id="social" class="textwidget">
+                        <ul class="wpfai-list">
+                            <li class="wpfai-list-item facebook">
+                                <a href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fsdi4apps.eu%2F&amp;t=SDI%204%20Apps" title="Facebook" class="wpfai-facebook wpfai-link">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-square fa-stack-2x"></i>
+                                        <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                                    </span> 
+                                </a>
+                            </li>
+                            <li class="wpfai-list-item twitter">
+                                <a href="http://twitter.com/home?status=SDI%204%20Apps%20http%3A%2F%2Fsdi4apps.eu%2F" title="Twitter" class="wpfai-twitter wpfai-link">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-square fa-stack-2x"></i>
+                                        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                    </span> 
+                                </a>
+                            </li>
+                            <li class="wpfai-list-item google-plus">
+                                <a href="https://plus.google.com/share?url=http%3A%2F%2Fsdi4apps.eu%2F" title="Google Plus" class="wpfai-google-plus wpfai-link">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-square fa-stack-2x"></i>
+                                        <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+                                    </span> 
+                                </a>
+                            </li>
+                            <li class="wpfai-list-item linkedin">
+                                <a href="http://linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Fsdi4apps.eu%2F&amp;title=SDI%204%20Apps" title="Linked In" class="wpfai-linkedin wpfai-link">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-square fa-stack-2x"></i>
+                                        <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                                    </span> 
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="text-4" class="widget-wrapper widget_text">
+                    <div class="footer-title">
+                        <h4>Disclaimer:</h4>
+                    </div>
+                    <div class="textwidget">
+                        <p>Views expressed on this website are those of the individuals, partners or the consortium and do not represent the opinion of the community.</p>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /row -->
+<div class="eucopy"><img src="http://sdi4apps.eu/wp-content/uploads/2014/05/EU_flag_white.png" alt="EU flag"> The project has received funding from the EU ICT Policy Support Programme as part of the Competitiveness and Innovation Framework Programme.</div>
+
+    </div><!-- /container -->
+</footer>

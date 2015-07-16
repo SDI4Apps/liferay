@@ -1,0 +1,50 @@
+<portlet-preferences>
+    <portlet name="embedhtml33">
+        <preference name="permalink id" ref="permalink" 
+            type="string" description="e.g. /a38998fa"/>
+        <preference name="height" ref="height" 
+            type="string" description="e.g. 300"/>
+        <preference name="width" ref="width" 
+            type="string" description="e.g. 300"/>
+   </portlet>
+    <portlet name="embedsimple33">
+        <preference name="permalink id" ref="permalink" 
+            type="string" description="e.g. /a38998fa"/>
+        <preference name="height" ref="height" 
+            type="string" description="e.g. 300"/>
+        <preference name="width" ref="width" 
+            type="string" description="e.g. 300"/>
+   </portlet>
+    <portlet name="embedadv33">
+        <preference name="permalink id" ref="permalink" 
+            type="string" description="e.g. /a38998fa"/>
+        <preference name="height" ref="height" 
+            type="string" description="e.g. 300"/>
+        <preference name="width" ref="width" 
+            type="string" description="e.g. 300"/>
+   </portlet>
+    <portlet name="embedhtml34">
+        <preference name="permalink id" ref="permalink" 
+            type="string" description="e.g. /a38998fa"/>
+        <preference name="height" ref="height" 
+            type="string" description="e.g. 300"/>
+        <preference name="width" ref="width" 
+            type="string" description="e.g. 300"/>
+   </portlet>
+    <portlet name="embedsimple34">
+        <preference name="permalink id" ref="permalink" 
+            type="string" description="e.g. /a38998fa"/>
+        <preference name="height" ref="height" 
+            type="string" description="e.g. 300"/>
+        <preference name="width" ref="width" 
+            type="string" description="e.g. 300"/>
+   </portlet>
+    <portlet name="embedadv34">
+        <preference name="permalink id" ref="permalink" 
+            type="string" description="e.g. /a38998fa"/>
+        <preference name="height" ref="height" 
+            type="string" description="e.g. 300"/>
+        <preference name="width" ref="width" 
+            type="string" description="e.g. 300"/>
+   </portlet>
+</portlet-preferences>

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE display PUBLIC "-//Liferay//DTD Display 6.1.0//EN" "http://www.liferay.com/dtd/liferay-display_6_1_0.dtd">
+
+<display>
+	<category name="Geoportal">
+		<portlet id="mapViewer-3.4" />
+		<portlet id="mapViewer-custom-3.4" />
+		<portlet id="mapViewer-3.3" />
+		<portlet id="mapViewer-custom-3.3" />
+		<portlet id="embed-html-3.3" />
+		<portlet id="embed-simple-3.3" />
+		<portlet id="embed-adv-3.3" />
+		<portlet id="embed-html-3.4" />
+		<portlet id="embed-simple-3.4" />
+		<portlet id="embed-adv-3.4" />
+	</category>
+</display>

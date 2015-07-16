@@ -1,0 +1,265 @@
+<?xml version="1.0"?>
+
+<portlet-app
+	version="2.0"
+	xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd"
+>
+	<portlet>
+		<portlet-name>mapViewer-3.4</portlet-name>
+		<display-name>Map Viewer 3.4 version</display-name>
+		<portlet-class>com.liferay.util.bridges.mvc.MVCPortlet</portlet-class>
+		<init-param>
+			<name>view-jsp</name>
+			<value>/view.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+		</supports>
+		<portlet-info>
+			<title>Map Viewer 3.4 version</title>
+			<short-title>MapViewer  3.4</short-title>
+			<keywords>MapViewer, hslayers-3.4</keywords>
+		</portlet-info>
+	</portlet>
+	<portlet>
+		<portlet-name>mapViewer-custom-3.4</portlet-name>
+		<display-name>Map Viewer 3.4 Custom version</display-name>
+		<portlet-class>com.liferay.util.bridges.mvc.MVCPortlet</portlet-class>
+		<init-param>
+			<name>view-jsp</name>
+			<value>/view_custom.jsp</value>
+		</init-param>
+		<init-param>
+			<name>edit-jsp</name>
+			<value>/edit_custom.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+            <portlet-mode>view</portlet-mode>
+            <portlet-mode>edit</portlet-mode>
+            <portlet-mode>preferences</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>Map Viewer 3.4 Custom version</title>
+			<short-title>MapViewer Custom 3.4</short-title>
+			<keywords>MapViewer, custom, hslayers-3.4</keywords>
+		</portlet-info>
+	</portlet>
+
+	<portlet>
+		<portlet-name>mapViewer-3.3</portlet-name>
+		<display-name>Map Viewer 3.3 version</display-name>
+		<portlet-class>com.liferay.util.bridges.mvc.MVCPortlet</portlet-class>
+		<init-param>
+			<name>view-jsp</name>
+			<value>/view.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+		</supports>
+		<portlet-info>
+			<title>Map Viewer 3.3 version</title>
+			<short-title>MapViewer 3.3</short-title>
+			<keywords>MapViewer, hslayers-3.3</keywords>
+		</portlet-info>
+	</portlet>
+	<portlet>
+		<portlet-name>mapViewer-custom-3.3</portlet-name>
+		<display-name>Map Viewer 3.3 Custom version</display-name>
+		<portlet-class>com.liferay.util.bridges.mvc.MVCPortlet</portlet-class>
+		<init-param>
+			<name>view-jsp</name>
+			<value>/view_custom.jsp</value>
+		</init-param>
+		<init-param>
+			<name>edit-jsp</name>
+			<value>/edit_custom.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+            <portlet-mode>view</portlet-mode>
+            <portlet-mode>edit</portlet-mode>
+            <portlet-mode>preferences</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>Map Viewer 3.3 Custom version</title>
+			<short-title>MapViewer Custom 3.3</short-title>
+			<keywords>MapViewer, custom, hslayers-3.3</keywords>
+		</portlet-info>
+	</portlet>
+
+	<portlet>
+		<portlet-name>embed-html-3.3</portlet-name>
+		<display-name>Embedded HTML 3.3 version</display-name>
+		<portlet-class>com.liferay.util.bridges.mvc.MVCPortlet</portlet-class>
+		<init-param>
+			<name>view-jsp</name>
+			<value>/view_embed_html.jsp</value>
+		</init-param>
+		<init-param>
+			<name>edit-jsp</name>
+			<value>/edit_embed.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+            <portlet-mode>view</portlet-mode>
+            <portlet-mode>edit</portlet-mode>
+            <portlet-mode>preferences</portlet-mode>
+		</supports>
+        <supported-locale>en</supported-locale>
+        <supported-locale>cs</supported-locale>
+        <resource-bundle>Language</resource-bundle>
+		<portlet-info>
+			<title>Embedded HTML 3.3 version</title>
+			<short-title>Embedded HTML 3.3</short-title>
+			<keywords>MapViewer, embed, html, hslayers-3.3</keywords>
+		</portlet-info>
+	</portlet>
+	<portlet>
+		<portlet-name>embed-simple-3.3</portlet-name>
+		<display-name>Embedded Simple JS 3.3 version</display-name>
+		<portlet-class>com.liferay.util.bridges.mvc.MVCPortlet</portlet-class>
+		<init-param>
+			<name>view-jsp</name>
+			<value>/view_embed_simple.jsp</value>
+		</init-param>
+		<init-param>
+			<name>edit-jsp</name>
+			<value>/edit_embed.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+            <portlet-mode>view</portlet-mode>
+            <portlet-mode>edit</portlet-mode>
+            <portlet-mode>preferences</portlet-mode>
+		</supports>
+        <supported-locale>en</supported-locale>
+        <supported-locale>cs</supported-locale>
+        <resource-bundle>Language</resource-bundle>
+		<portlet-info>
+			<title>Embedded Simple JS 3.3 version</title>
+			<short-title>Embedded S.JS 3.3</short-title>
+			<keywords>MapViewer, embed, simpleJS, hslayers-3.3</keywords>
+		</portlet-info>
+	</portlet>
+	<portlet>
+		<portlet-name>embed-adv-3.3</portlet-name>
+		<display-name>Embedded Advanced JS 3.3 version</display-name>
+		<portlet-class>com.liferay.util.bridges.mvc.MVCPortlet</portlet-class>
+		<init-param>
+			<name>view-jsp</name>
+			<value>/view_embed_adv.jsp</value>
+		</init-param>
+		<init-param>
+			<name>edit-jsp</name>
+			<value>/edit_embed.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+            <portlet-mode>view</portlet-mode>
+            <portlet-mode>edit</portlet-mode>
+            <portlet-mode>preferences</portlet-mode>
+		</supports>
+        <supported-locale>en</supported-locale>
+        <supported-locale>cs</supported-locale>
+        <resource-bundle>Language</resource-bundle>
+		<portlet-info>
+			<title>Embedded Advanced JS 3.3 version</title>
+			<short-title>Embedded AdvJS 3.3</short-title>
+			<keywords>MapViewer, embed, advancedJS, hslayers-3.3</keywords>
+		</portlet-info>
+	</portlet>
+	<portlet>
+		<portlet-name>embed-html-3.4</portlet-name>
+		<display-name>Embedded HTML 3.4 version</display-name>
+		<portlet-class>com.liferay.util.bridges.mvc.MVCPortlet</portlet-class>
+		<init-param>
+			<name>view-jsp</name>
+			<value>/view_embed_html.jsp</value>
+		</init-param>
+		<init-param>
+			<name>edit-jsp</name>
+			<value>/edit_embed.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+            <portlet-mode>view</portlet-mode>
+            <portlet-mode>edit</portlet-mode>
+            <portlet-mode>preferences</portlet-mode>
+		</supports>
+        <supported-locale>en</supported-locale>
+        <supported-locale>cs</supported-locale>
+        <resource-bundle>Language</resource-bundle>
+		<portlet-info>
+			<title>Embedded HTML 3.4 version</title>
+			<short-title>Embedded HTML 3.4</short-title>
+			<keywords>MapViewer, embed, html, hslayers-3.4</keywords>
+		</portlet-info>
+	</portlet>
+	<portlet>
+		<portlet-name>embed-simple-3.4</portlet-name>
+		<display-name>Embedded Simple JS 3.4 version</display-name>
+		<portlet-class>com.liferay.util.bridges.mvc.MVCPortlet</portlet-class>
+		<init-param>
+			<name>view-jsp</name>
+			<value>/view_embed_simple.jsp</value>
+		</init-param>
+		<init-param>
+			<name>edit-jsp</name>
+			<value>/edit_embed.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+            <portlet-mode>view</portlet-mode>
+            <portlet-mode>edit</portlet-mode>
+            <portlet-mode>preferences</portlet-mode>
+		</supports>
+        <supported-locale>en</supported-locale>
+        <supported-locale>cs</supported-locale>
+        <resource-bundle>Language</resource-bundle>
+		<portlet-info>
+			<title>Embedded Simple JS 3.4 version</title>
+			<short-title>Embedded S.JS 3.4</short-title>
+			<keywords>MapViewer, embed, simpleJS, hslayers-3.4</keywords>
+		</portlet-info>
+	</portlet>
+	<portlet>
+		<portlet-name>embed-adv-3.4</portlet-name>
+		<display-name>Embedded Advanced JS 3.4 version</display-name>
+		<portlet-class>com.liferay.util.bridges.mvc.MVCPortlet</portlet-class>
+		<init-param>
+			<name>view-jsp</name>
+			<value>/view_embed_adv.jsp</value>
+		</init-param>
+		<init-param>
+			<name>edit-jsp</name>
+			<value>/edit_embed.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+            <portlet-mode>view</portlet-mode>
+            <portlet-mode>edit</portlet-mode>
+            <portlet-mode>preferences</portlet-mode>
+		</supports>
+        <supported-locale>en</supported-locale>
+        <supported-locale>cs</supported-locale>
+        <resource-bundle>Language</resource-bundle>
+		<portlet-info>
+			<title>Embedded Advanced JS 3.4 version</title>
+			<short-title>Embedded AdvJS 3.4</short-title>
+			<keywords>MapViewer, embed, advancedJS, hslayers-3.4</keywords>
+		</portlet-info>
+	</portlet>
+</portlet-app>
