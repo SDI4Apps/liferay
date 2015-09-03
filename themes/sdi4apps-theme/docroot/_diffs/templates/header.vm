@@ -24,25 +24,28 @@
 
     <nav role="navigation">
         #if ($widthtype)
-        <div class="navbar no-border navbar-inverse navbar-static-top">
+            <div class="navbar no-border navbar-inverse navbar-static-top">
         #else
-        <div class="navbar navbar-inverse navbar-static-top">
+            <div class="navbar navbar-inverse navbar-static-top">
         #end
-            <div class="container">
-<div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
 
-                       <div id="logo"><a href="http://sdi4apps.eu/" title="SDI4APPS" rel="home">
-                <img src="http://sdi4apps.eu/wp-content/uploads/2014/05/sdi4apps_logo_web.png" alt="SDI4APPS">
-            </a></div>
+                        <div id="logo">
+                            <a href="http://sdi4apps.eu/" title="SDI4APPS" rel="home">
+                                <img src="http://sdi4apps.eu/wp-content/uploads/2014/05/sdi4apps_logo_web.png" alt="SDI4APPS">
+                            </a>
+                        </div>
                     </div>
 
-<div id="joinus">Join us at <a href="http://www.linkedin.com/groups/SDI4Apps-3516067" target="_blank"><img src="http://sdi4apps.eu/wp-content/uploads/2014/05/LinkedIn-Logo-2C.png" rel="magnific" alt="LinkedIn-Logo" height="24" width="100"></a></div>
-
+                    <div id="joinus">
+                        Join us at <a href="http://www.linkedin.com/groups/SDI4Apps-3516067" target="_blank"><img src="http://sdi4apps.eu/wp-content/uploads/2014/05/LinkedIn-Logo-2C.png" rel="magnific" alt="LinkedIn-Logo" height="24" width="100"></a>
+                    </div>
 
                 #if ($has_navigation || $is_signed_in)
                     #parse ("$full_templates_path/navigation.vm")
