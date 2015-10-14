@@ -1,0 +1,151 @@
+div#wrapper.no-border {
+    padding-top:0;
+    padding-bottom:0;
+    padding-right:0;
+    padding-left:0;
+}
+
+.aui nav#breadcrumbs {
+    margin-bottom: 0px;
+}
+.aui ul.breadcrumb {
+    margin:0
+}
+.portlet-dockbar .navbar {
+	min-height:46px;
+}
+.aui .dockbar {
+	background: #333;
+	color: #fff;
+}
+.aui .dockbar div.navbar-inner {
+    background-color: #333;
+    background-image: none;
+    border-bottom: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+.aui .navbar .nav > li > a {
+	color: #fff;
+	text-shadow: none;
+}
+
+.aui .navbar .nav > li > a:focus, .aui .navbar .nav > li > a:hover {
+	color: #000;
+}
+
+.aui .navbar .divider-vertical {
+	height: auto;
+	margin: 0;
+	border-left: 0;
+	border-right: 0;
+}
+
+ul.nav-account-controls {
+    padding: 2px 0;
+}
+
+.aui .navbar .nav > li > a.user-notification-link {
+    background-color: #0066B3;
+    padding: 5px 10px;
+    color: #fff;
+    text-shadow: 0 1px 0 #555555;
+}
+
+.aui .navbar .nav > .active > a, .aui .navbar .nav > .active > a:hover, .aui .navbar .nav > .active > a:focus {
+    background-color: #0066B3;
+    color: #fff;
+    text-shadow: 0 1px 0 #555555;
+}
+
+.aui .navbar {
+    margin-bottom:0;
+
+}
+
+div.navbar-header {
+    float: left;
+    padding-left: 10px;
+}
+
+.aui nav#navigation div.navbar-inner {
+    background-color:transparent;
+    background-image:none;
+    border: none;
+    box-shadow:none;
+    padding-right: 0;
+}
+.aui nav#navigation div.nav-collapse {
+    padding-top:63px;
+}
+
+header#banner {
+    background-color: #009ee0;
+    border: 1px solid #0081b7;
+    border-radius: 0px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+}
+
+div#heading {
+    padding: 10px 0;
+}
+
+div#heading > div.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+div#content {
+    margin-top: 0px;
+}
+
+div#content > form#hrefFm {
+    margin:0;
+}
+div#content .portlet-borderless-bar {
+    z-index: 1001;
+}
+header#banner .collapse, div.portlet-dockbar .collapse {
+    display:block;
+    visibility:visible;
+}
+
+header#banner .container, div.portlet-dockbar .container {
+    padding-left:0;
+    padding-right:0;
+}
+
+header#banner .navbar-brand {
+    float:none;
+    height:auto;
+    padding: 0;
+    font-size: 14px;
+}
+.aui .modal.modal-hidden {
+    display: none;
+}
+.aui .modal {
+    display:inline
+}
+
+@media (max-width: 979px) {
+    .aui div.nav-collapse, .aui div.nav-collapse.collapse {
+        height: auto;
+    }
+    .aui ul.nav-collapse, .aui ul.nav-collapse.collapse {
+        height: auto;
+    }
+}
+
+@media (max-width: 767px) {
+	.aui body {
+		padding-left:0;
+		padding-right:0;
+	}
+	
+	.aui .navbar-fixed-top, .aui .navbar-fixed-bottom, .aui .navbar-static-top {
+		margin-left:0px;
+		margin-right:0px;
+	}
+}

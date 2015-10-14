@@ -18,7 +18,6 @@
 <%@ page import="javax.portlet.WindowState"%>
 <%@ page import="javax.portlet.PortletURL"%>
 <%@ page import="javax.portlet.ActionRequest"%>
-<%@ page import="javax.portlet.PortletPreferences"%>
 
 <%@ page import="com.liferay.portal.kernel.language.LanguageUtil"%>
 <%@ page import="com.liferay.portal.security.permission.ActionKeys"%>

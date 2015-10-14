@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 
 #parse ($init)
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7 #language("lang.dir")" dir="#language("lang.dir")" lang="$w3c_language_id"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8 #language("lang.dir")" dir="#language("lang.dir")" lang="$w3c_language_id"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9 #language("lang.dir")" dir="#language("lang.dir")" lang="$w3c_language_id"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js #language("lang.dir")" dir="#language("lang.dir")" lang="$w3c_language_id"> <!--<![endif]-->
+
+<html class="$root_css_class" dir="#language ("lang.dir")" lang="$w3c_language_id">
 
 <head>
     <title>$the_title - $company_name</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <meta content="initial-scale=1.0, width=device-width" name="viewport" />
     <script src="/wwwlibs/hslayers/HS.js" type="text/javascript"></script>
 
     <script type="text/javascript">
@@ -40,39 +39,70 @@
 
     #set ($widthtype = $theme.getSetting("content-full-width"))
     #set ($footer = $theme.getSetting("footer"))
-    #set ($slimer = $theme.getSetting("slimer-header"))
 
     $theme.include($top_head_include)
-
-    #if ($slimer == true)
-        <link rel="stylesheet" media="screen,projection" type="text/css" href="/css/slimer-header.css"></link>
-    #end
     <link rel="stylesheet" media="screen,projection" type="text/css" href="/wwwlibs/ext/resources/css/ext-all.css"></link>
     <link rel="stylesheet" media="screen,projection" type="text/css" href="/wwwlibs/ext/resources/css/xtheme-gray.css"></link>
-    <link rel='stylesheet' id='googleFonts-css'  href='http://fonts.googleapis.com/css?family=Montserrat%3A400%2C700&#038;ver=4.1.1' type='text/css' media='all' />
-    <script src="$javascript_folder/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-    <script src="js/iframefull.js"></script>
+    <link rel='stylesheet' id='googleFonts-css'  href='//fonts.googleapis.com/css?family=Oxygen:400,300,700' type='text/css' media='all' />
+
+    <script src="$javascript_folder/iframefull.js" defer="defer"></script>
 </head>
 
 <body class="$css_class">
-    <!--[if lt IE 7]>
-        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-    <![endif]-->
+
+<a href="#main-content" id="skip-to-content">#language ("skip-to-content")</a>
+
 $theme.include($body_top_include)
 
 #if ($is_signed_in)
     #dockbar()
+#else
+    #set($companyLocalService = $serviceLocator.findService("com.liferay.portal.service.CompanyLocalService"))
+    #set($company = $companyLocalService.getCompany($company_id))
+    #set($portalURL = $company.getVirtualHostname())
+    #set ($create_account_url = $portletURLFactory.create($request, "58", $page.getPlid(), "ACTION_PHASE"))
+    $create_account_url.setWindowState("maximized")
+    $create_account_url.setPortletMode("view")
+    $create_account_url.setParameter("saveLastPath", "0")
+    $create_account_url.setParameter("struts_action", "/login/create_account")
+
+
+<div class="portlet-boundary portlet-boundary_145_ portlet-static portlet-static-end portlet-borderless portlet-dockbar " id="p_p_id_145_">
+    <div class="navbar navbar-static-top dockbar" id="_145_dockbar" data-namespace="_145_">
+        <div class="navbar-inner">
+            <div class="container">
+                <div class="collapse nav-collapse" id="_145_navAccountControlsNavbarCollapse">
+                    <ul aria-label="Dockbar" class="nav nav-account-controls" id="_145_navAccountControls" role="menubar">
+                        <li class="register" role="presentation">
+                            <a class="" data-redirect="true" href="$create_account_url" id="" role="menuitem" title="">
+                                <span class="nav-item-label"> $languageUtil.get($locale, "Register") </span>
+                            </a>
+                        </li>
+                        <li class="divider-vertical " id="whxm_" role="presentation"> </li>
+                        <li class="sign-in " id="ljla_" role="presentation">
+                            <a class="" data-redirect="true" href="https://$portalURL/cas-server/login?service=http://$portalURL/php/cas.html" id="" role="menuitem" title="">
+                                <i class="icon-user"></i>
+                                <span class="nav-item-label"> $sign_in_text </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">AUI().use("liferay-dockbar",function(a){(function(){Liferay.Dockbar.init("#_145_dockbar");var b=a.all(".portlet-column-content.customizable");if(b.size()>0){b.get("parentNode").addClass("customizable")}})()});</script>
+</div>
 #end
 
-    #parse ("$full_templates_path/header.vm")
-    #if ($widthtype == true)
-    <div class="container no-border">
-    #else
-    <div class="container">
-    #end
+#parse ("$full_templates_path/header.vm")
 
+#if ($widthtype == true)
+<div class="container-fluid no-border" id="wrapper">
+#else
+<div class="container-fluid" id="wrapper">
+#end
 
-
+    <div id="content">
         #if ($selectable)
             $theme.include($content_include)
         #else
@@ -82,21 +112,19 @@ $theme.include($body_top_include)
 
             $theme.wrapPortlet("portlet.vm", $content_include)
         #end
+    </div>
 
-    </div> <!-- /container -->
     #if ($footer == true)
     #parse ("$full_templates_path/footer.vm")
     #end
+</div>
 
 $theme.include($body_bottom_include)
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="$javascript_folder/vendor/jquery-1.11.3.min.js"><\/script>')</script>
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    <link rel="stylesheet" href="$css_folder/font-awesome.min.css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-</body>
-
 $theme.include($bottom_include)
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="$javascript_folder/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+</body>
 
 </html>

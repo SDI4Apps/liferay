@@ -50,7 +50,6 @@ a portlet plugin.
 			<arg value="service.spring.file=${basedir}/docroot/WEB-INF/ext-impl/src/META-INF/ext-spring.xml" />
 			<arg value="service.api.dir=${basedir}/docroot/WEB-INF/ext-service/src" />
 			<arg value="service.impl.dir=${basedir}/docroot/WEB-INF/ext-impl/src" />
-			<arg value="service.json.file=${basedir}/docroot/WEB-INF/ext-web/docroot/html/js/liferay/service.js" />
 			<arg value="service.remoting.file=${basedir}/docroot/WEB-INF/ext-web/docroot/WEB-INF/remoting-servlet-ext.xml" />
 			<arg value="service.sql.dir=${basedir}/docroot/WEB-INF/sql" />
 			<arg value="service.sql.file=portal-tables.sql" />
@@ -163,17 +162,21 @@ loader.
 		<mkdir dir="docroot/WEB-INF/ext-lib/global" />
 		<mkdir dir="docroot/WEB-INF/ext-${module.name}/classes" />
 
-		<path id="plugin-lib.classpath">
-			<fileset dir="docroot/WEB-INF/ext-lib/global" includes="*.jar" />
-			<pathelement location="docroot/WEB-INF/ext-${module.name}/classes" />
-		</path>
+		<if>
+			<available file="docroot/WEB-INF/ext-${module.name}/src" />
+			<then>
+				<path id="plugin-lib.classpath">
+					<fileset dir="docroot/WEB-INF/ext-lib/global" includes="*.jar" />
+					<pathelement location="docroot/WEB-INF/ext-${module.name}/classes" />
+				</path>
 
-		<antcall target="compile-java">
-			<param name="javac.classpathref" value="plugin.classpath" />
-			<param name="javac.destdir" value="docroot/WEB-INF/ext-${module.name}/classes" />
-			<param name="javac.srcdir" value="docroot/WEB-INF/ext-${module.name}/src" />
-			<reference refid="plugin-lib.classpath" torefid="plugin-lib.classpath" />
-		</antcall>
+				<compile-java
+					javac.classpathref="plugin.classpath"
+					javac.destdir="docroot/WEB-INF/ext-${module.name}/classes"
+					javac.srcdir="docroot/WEB-INF/ext-${module.name}/src"
+				/>
+			</then>
+		</if>
 	</target>
 
 	<target name="compile-with-portal-class-loader">
@@ -189,12 +192,11 @@ loader.
 			<fileset dir="${app.server.lib.portal.dir}" includes="*.jar" />
 		</path>
 
-		<antcall target="compile-java">
-			<param name="javac.classpathref" value="plugin.classpath" />
-			<param name="javac.destdir" value="docroot/WEB-INF/ext-${module.name}/classes" />
-			<param name="javac.srcdir" value="docroot/WEB-INF/ext-${module.name}/src" />
-			<reference refid="plugin-lib.classpath" torefid="plugin-lib.classpath" />
-		</antcall>
+		<compile-java
+			javac.classpathref="plugin.classpath"
+			javac.destdir="docroot/WEB-INF/ext-${module.name}/classes"
+			javac.srcdir="docroot/WEB-INF/ext-${module.name}/src"
+		/>
 	</target>
 
 	<target name="deploy-properties">
@@ -242,9 +244,14 @@ loader.
 			overwrite="true"
 		/>
 
-		<copy todir="${app.server.portal.dir}" overwrite="true">
-			<fileset dir="docroot/WEB-INF/ext-web/docroot" excludes="WEB-INF/web.xml" />
-		</copy>
+		<if>
+			<available file="docroot/WEB-INF/ext-web/docroot" />
+			<then>
+				<copy todir="${app.server.portal.dir}" overwrite="true">
+					<fileset dir="docroot/WEB-INF/ext-web/docroot" excludes="WEB-INF/web.xml" />
+				</copy>
+			</then>
+		</if>
 
 		<if>
 			<available file="docroot/WEB-INF/ext-web/docroot/WEB-INF/web.xml" />

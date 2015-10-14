@@ -17,28 +17,14 @@ function fullSize() {
     }
 }
 
-function getHeight() {
-    var windowHeight = document.body.parentNode.clientHeight;
-    var headerHeight = 0;
-
-    var northDIV = ['.portlet-dockbar','#header'];
-
-    for (idiv = 0; idiv < northDIV.length; idiv++) {
-        if ($(northDIV[idiv]).length > 0) {
-            headerHeight += $(northDIV[idiv]).height();
-        }
-    }
-
-    var height = windowHeight - headerHeight;
-    return height;
-}
-
 function fullresize() {
     if ($('.iframefull').length > 0){
         var iframe = $('iframe');
         var contDiv = $('iframe').parent();
         var width = $('#content').width();
-        var iframeHeight = getHeight();
+        var windowHeight = $(window).height();
+        var headerHeight = $('.portlet-dockbar').outerHeight() + $('.breadcrumbs').outerHeight() + $('#header').outerHeight() + 10;
+        var iframeHeight = windowHeight - headerHeight;
         contDiv.height(iframeHeight);
         iframe.height(iframeHeight);
         contDiv.width(width);
