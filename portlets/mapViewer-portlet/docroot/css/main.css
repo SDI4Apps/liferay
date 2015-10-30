@@ -6,6 +6,19 @@ div.ol-control button{
     text-shadow: none;
 }
 
-div.ng-scope #toolbar button:hover {
-    background-image:none;
+div.ng-scope {
+	#toolbar button:hover {
+	    background-image:none;
+	}
+
+	.aui select, .aui textarea, .aui input[type="text"], .aui input[type="password"], .aui input[type="datetime"], .aui input[type="datetime-local"], .aui input[type="date"], .aui input[type="month"], .aui input[type="time"], .aui input[type="week"], .aui input[type="number"], .aui input[type="email"], .aui input[type="url"], .aui input[type="search"], .aui input[type="tel"], .aui input[type="color"], .aui .uneditable-input {
+		display:block;
+		height: 34px;
+		padding: 6px 12px;
+		margin-bottom:0;
+	}
+
+	.aui input, .aui textarea, .aui .uneditable-input {
+		width: auto;
+	}
 }

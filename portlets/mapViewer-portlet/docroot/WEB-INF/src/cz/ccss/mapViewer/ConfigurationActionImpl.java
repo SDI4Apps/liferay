@@ -24,14 +24,14 @@ public class ConfigurationActionImpl implements ConfigurationAction {
             return;
         }
 
-        String compurl = ParamUtil.getString(actionRequest, "compurl");
+        String caturl = ParamUtil.getString(actionRequest, "caturl");
 
         String portletResource = ParamUtil.getString(actionRequest,
                 "portletResource");
         PortletPreferences preferences = PortletPreferencesFactoryUtil
                 .getPortletSetup(actionRequest, portletResource);
 
-        preferences.setValue("compurl", compurl);
+        preferences.setValue("caturl", caturl);
 
         preferences.store();
 

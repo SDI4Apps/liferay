@@ -38,5 +38,5 @@
         request, portletResource);
     }
 
-    String compurl = preferences.getValue("compurl", StringPool.BLANK);
+    String caturl = preferences.getValue("caturl", StringPool.BLANK);
 %>

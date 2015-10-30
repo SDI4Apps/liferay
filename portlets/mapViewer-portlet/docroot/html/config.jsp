@@ -13,10 +13,10 @@
 
     <table class="lfr-table">
         <tr>
-            <td>Map Compositions Catalogue URL</td>
-            <td><input width=50 type="text"
-                name="<portlet:namespace />compurl" value="<%=compurl%>" /></td>
-            <td>http://liferay.local/cat/libs/cswclient/cswClientRun.php</td>
+            <td>Catalogue URL</td>
+            <td><input width=150 type="text"
+                name="<portlet:namespace />caturl" value="<%=caturl%>" /></td>
+            <td>http://liferay.local/php/metadata/csw/index.php</td>
         </tr>
         <tr>
             <td colspan="2"><input type="button"
