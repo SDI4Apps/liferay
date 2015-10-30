@@ -32,13 +32,16 @@ var init = function() {
     }
     var windowHeight = document.body.parentNode.clientHeight;
 
-    var mapHeight = windowHeight - headerHeight - 175;
+    var mapHeight = windowHeight - headerHeight - 30;
 
     lm = Ext4.create("HSRS.LayerManager",{
         url: "<%=layurl%>/layman",
         height : mapHeight,
         srid: "<%=srid%>",
-        renderTo : "data"
+        renderTo: "data",
+        showCkan: false,
+        showFiles: true,
+        showData: false
         });
 
 };
