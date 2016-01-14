@@ -7,6 +7,7 @@ dist/
 *.settings*
 *.classpath
 *.project
+*build.gradle
 *.tern-project
 **/classes/
 .ivy/
