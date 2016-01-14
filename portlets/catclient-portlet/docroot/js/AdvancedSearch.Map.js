@@ -12,7 +12,7 @@ AdvancedSearch.Map.createMap =  function(id) {
     }
 
     var options = {
-            projection: new OpenLayers.Projection("epsg:900913"),
+            projection: new OpenLayers.Projection("epsg:3857"),
             maxExtent: new OpenLayers.Bounds(-20037508.3427892,-20037508.3427892,20037508.3427892,20037508.3427892),
             units: "m",
         controls: [],
@@ -35,8 +35,7 @@ AdvancedSearch.Map.createMap =  function(id) {
     }
 
     map.addLayer(osm);
-    map.zoomToMaxExtent();
-    map.zoomTo(AdvancedSearch.Map.defaultZoom);
+    map.zoomToExtent(new OpenLayers.Bounds(-2661231.576, 3933143.727, 4931105.568, 12229924.524));
 
     return map;
 }
