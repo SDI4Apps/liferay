@@ -60,7 +60,7 @@ define(['angular', 'ol', 'core', 'api', 'sidebar', 'toolbar', 'layermanager', 'm
             }),
             datasources: [{
                    title: "SuperCAT",
-                   url: "http://cat.ccss.cz/php/metadata/csw/",
+                   url: "http://cat.ccss.cz/csw/",
                    language: 'eng',
                    code_list_url: '/php/metadata/util/codelists.php?_dc=1440156028103&language=eng&page=1&start=0&limit=25&filter=%5B%7B%22property%22%3A%22label%22%7D%5D',
                    type: "micka"
