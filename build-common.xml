@@ -122,7 +122,7 @@
 			</not>
 		</and>
 		<then>
-			<copy file="${sdk.dir}/lib/ecj.jar" todir="${ant.home}/lib" />
+			<copy file="${sdk.dir}/lib/ecj.jar" todir="${user.home}/.ant/lib" />
 
 			<fail>
 .
@@ -141,7 +141,7 @@ ECJ was automatically installed. Please rerun your task.
 					</not>
 				</and>
 				<then>
-					<copy file="${sdk.dir}/lib/error_prone_ant.jar" todir="${ant.home}/lib" />
+					<copy file="${sdk.dir}/lib/error_prone_ant.jar" todir="${user.home}/.ant/lib" />
 
 					<fail>
 .
