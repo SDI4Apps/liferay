@@ -1,8 +1,7 @@
 'use strict';
 
-define(['angular', 'ol', 'core', 'api', 'sidebar', 'toolbar', 'layermanager', 'map', 'query', 'search', 'permalink', 'measure', 'datasource_selector', 'ows', 'WfsSource', 'angular-gettext', 'translations', 'compositions', 'status_creator'],
-
-    function(angular, ol, toolbar, layermanager, WfsSource) {
+define(['angular', 'ol', 'toolbar', 'layermanager', 'sidebar', 'map', 'ows', 'query', 'search', 'permalink', 'measure', 'legend', 'bootstrap', 'geolocation', 'core', 'datasource_selector', 'api', 'angular-gettext', 'translations', 'compositions', 'status_creator'],
+    function(angular, ol, toolbar, layermanager) {
         var module = angular.module('hs', [
             'hs.sidebar',
             'hs.toolbar',
@@ -10,7 +9,7 @@ define(['angular', 'ol', 'core', 'api', 'sidebar', 'toolbar', 'layermanager', 'm
             'hs.map',
             'hs.query',
             'hs.search', 'hs.permalink', 'hs.measure',
-            'hs.core',
+            'hs.geolocation', 'hs.core',
             'hs.datasource_selector',
             'hs.status_creator',
             'hs.api',
@@ -21,7 +20,7 @@ define(['angular', 'ol', 'core', 'api', 'sidebar', 'toolbar', 'layermanager', 'm
 
         module.directive('hs', ['hs.map.service', 'Core', function(OlMap, Core) {
             return {
-                templateUrl: hsl_path + '/hslayers.html',
+                templateUrl: '/mapViewer-portlet/html/hslayers.html',
                 link: function(scope, element) {
                     var w = angular.element($(window));
                     w.bind('resize', function() {
@@ -59,17 +58,10 @@ define(['angular', 'ol', 'core', 'api', 'sidebar', 'toolbar', 'layermanager', 'm
                 units: "m"
             }),
             datasources: [{
-                   title: "SuperCAT",
-                   url: "http://cat.ccss.cz/csw/",
+                   title: "Catalogue",
+                   url: caturl,
                    language: 'eng',
-                   code_list_url: '/php/metadata/util/codelists.php?_dc=1440156028103&language=eng&page=1&start=0&limit=25&filter=%5B%7B%22property%22%3A%22label%22%7D%5D',
                    type: "micka"
-               }, {
-                   title: "SDI4Apps",
-                   url: "/php/metadata/csw/",
-                   language: 'eng',
-                   type: "micka",
-                   code_list_url: '/php/metadata/util/codelists.php?_dc=1440156028103&language=eng&page=1&start=0&limit=25&filter=%5B%7B%22property%22%3A%22label%22%7D%5D'
                }
             ],
             'catalogue_url': caturl,
@@ -77,12 +69,14 @@ define(['angular', 'ol', 'core', 'api', 'sidebar', 'toolbar', 'layermanager', 'm
             status_manager_url: '/wwwlibs/statusmanager2/index.php',
         });
 
-        module.controller('Main', ['$scope', 'Core', 'hs.query.service_infopanel', 'hs.compositions.service_parser',
-            function($scope, Core, InfoPanelService, composition_parser) {
+        module.controller('Main', ['$scope', 'Core', 'hs.query.service_infopanel', 'hs.compositions.service_parser', 'config',
+            function($scope, Core, InfoPanelService, composition_parser, config) {
                 if (console) console.log("Main called");
                 $scope.hsl_path = hsl_path; //Get this from hslayers.js file
                 $scope.Core = Core;
                 Core.sidebarRight=false;
+                Core.singleDatasources = true;
+                Core.embededEnabled = false;
                 $scope.$on('infopanel.updated', function(event) {
                     if (console) console.log('Attributes', InfoPanelService.attributes, 'Groups', InfoPanelService.groups);
                 });

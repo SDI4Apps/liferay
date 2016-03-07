@@ -18,7 +18,6 @@ require.config({
         legend: hsl_path + 'components/legend/legend',
         app: '/mapViewer-portlet/js/app',
         core: hsl_path + 'components/core/core',
-        WfsSource: hsl_path + 'components/layers/hs.source.Wfs',
         datasource_selector: hsl_path + 'components/datasource_selector/datasource_selector',
         api: hsl_path + 'components/api/api',
         translations: hsl_path + 'components/translations/js/translations'
