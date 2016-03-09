@@ -27,3 +27,7 @@ input#search_address {
     background-color: white;
     padding-left: 10px;
 }
+
+div.panelspace {
+	box-shadow:none;
+}

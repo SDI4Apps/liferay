@@ -6,6 +6,10 @@
     <c:when test="<%= !disabled %>">
         <script src="<%= mapconfig %>" type="text/javascript"></script>
         <div hs ng-app="hs" ng-controller="Main" style="position: relative;"></div>
+        <script>
+            $('html').removeClass('aui');
+            $('#hs-liferay-header').addClass('aui');
+        </script>
     </c:when>
 </c:choose>
 

@@ -1,7 +1,7 @@
 <%@include file="/html/init.jsp"%>
 
 <div class="portlet-msg-info">
-    <span class="displaying-article-id-holder ">Map Viewer
+    <span class="displaying-article-id-holder "> Map Creator
         configuration page. </span>
 </div>
 
