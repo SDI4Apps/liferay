@@ -1,6 +1,11 @@
 <%@include file="init.jsp"%>
 
-<script>var caturl = "<%=caturl%>";</script>
+<script>
+    var caturl = "<%=caturl%>" || '/php/metadata/csw/index.php';
+    $('html').removeClass('aui');
+    $('#hs-liferay-header').addClass('aui');
+    $('.lfr-admin-panel').wrap("<div class='aui'></div>");
+</script>
 
 <c:choose>
     <c:when test="<%= !disabled %>">
