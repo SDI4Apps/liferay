@@ -1,8 +1,16 @@
 div#wrapper.no-border {
     padding-top:0;
     padding-bottom:0;
-    padding-right:0;
-    padding-left:0;
+    padding-right:0px;
+    padding-left:0px;
+}
+
+div#wrapper.no-border div#content {
+    margin-top:0;
+}
+
+.aui ul.ng-scope {
+    margin: 0 0 20px 0;
 }
 
 .aui nav#breadcrumbs {
@@ -11,38 +19,53 @@ div#wrapper.no-border {
 .aui ul.breadcrumb {
     margin:0
 }
+
 .portlet-dockbar .navbar {
-	min-height:46px;
+    min-height:46px;
 }
 .aui .dockbar {
-	background: #333;
-	color: #fff;
+    background: #333;
+    color: #fff;
 }
+
+.aui .btn.ng-scope {
+    background-image: none;
+    padding: 6px 12px;
+}
+
 .aui .dockbar div.navbar-inner {
     background-color: #333;
     background-image: none;
     border-bottom: none;
     box-shadow: none;
+/*    padding-left: 15px;
+    padding-right: 15px;*/
     -webkit-box-shadow: none;
 }
 
 .aui .navbar .nav > li > a {
-	color: #fff;
-	text-shadow: none;
+    color: #fff;
+    text-shadow: none;
 }
 
 .aui .navbar .nav > li > a:focus, .aui .navbar .nav > li > a:hover {
-	color: #000;
+    color: #fff;
+    text-decoration:underline;
 }
 
 .aui .navbar .divider-vertical {
-	height: auto;
-	margin: 0;
-	border-left: 0;
-	border-right: 0;
+    height: auto;
+    margin: 0;
+    border-left: 0;
+    border-right: 0;
 }
 
+.aui ul.dropdown-menu {
+    margin:0;
+    padding:5px;
+}
 ul.nav-account-controls {
+    margin: 0;
     padding: 2px 0;
 }
 
@@ -56,12 +79,14 @@ ul.nav-account-controls {
 .aui .navbar .nav > .active > a, .aui .navbar .nav > .active > a:hover, .aui .navbar .nav > .active > a:focus {
     background-color: #0066B3;
     color: #fff;
-    text-shadow: 0 1px 0 #555555;
+    text-shadow:none;
 }
 
 .aui .navbar {
     margin-bottom:0;
-
+    -webkit-box-shadow:none;
+    box-shadow:none;
+    min-height: auto;
 }
 
 div.navbar-header {
@@ -79,7 +104,6 @@ div.navbar-header {
 .aui nav#navigation div.nav-collapse {
     padding-top:63px;
 }
-
 header#banner {
     background-color: #009ee0;
     border: 1px solid #0081b7;
@@ -97,7 +121,7 @@ div#heading > div.container-fluid {
 }
 
 div#content {
-    margin-top: 0px;
+    margin-top: 10px;
 }
 
 div#content > form#hrefFm {
@@ -138,14 +162,12 @@ header#banner .navbar-brand {
     }
 }
 
-@media (max-width: 767px) {
-	.aui body {
-		padding-left:0;
-		padding-right:0;
-	}
-	
-	.aui .navbar-fixed-top, .aui .navbar-fixed-bottom, .aui .navbar-static-top {
-		margin-left:0px;
-		margin-right:0px;
-	}
+.aui div.row.gui-overlay {
+    margin-left:0;
+}
+
+@media (min-width: 1200px) {
+    .aui div.row.gui-overlay {
+        margin-left:0;
+    }
 }
