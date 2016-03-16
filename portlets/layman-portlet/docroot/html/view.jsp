@@ -1,10 +1,6 @@
 <%@include file="/html/init.jsp"%>
 <script>
 
-$('html').removeClass('aui');
-$('#hs-liferay-header').addClass('aui');
-$('.lfr-admin-panel').wrap("<div class='aui'></div>");
-
 Ext4.Loader.setConfig({
     enabled: true,
     paths: {"HSRS":'<%=layliburl%>'}
