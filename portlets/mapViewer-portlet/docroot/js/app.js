@@ -61,22 +61,22 @@ define(['angular', 'ol', 'toolbar', 'layermanager', 'sidebar', 'map', 'ows', 'qu
                     })
                 })
             ],
-            project_name: 'otn/map',
+            project_name: 'sdi4apps/map',
             default_view: new ol.View({
                 center: ol.proj.transform([MAPcenterX, MAPcenterY], 'EPSG:4326', 'EPSG:3857'), //Latitude longitude    to Spherical Mercator
                 zoom: MAPzoom,
                 units: "m"
             }),
             datasources: [{
-                title: "Hub layers",
+                title: "Catalogue",
                 url: "/php/metadata/csw/",
                 language: 'eng',
                 type: "micka",
                 code_list_url: '/php/metadata/util/codelists.php?_dc=1440156028103&language=eng&page=1&start=0&limit=25&filter=%5B%7B%22property%22%3A%22label%22%7D%5D'
             }],
-            'catalogue_url': caturl,
-            'compositions_catalogue_url': caturl,
-            status_manager_url: '/wwwlibs/statusmanager2/index.php'
+            'catalogue_url': caturl || '/php/metadata/csw/',
+            'compositions_catalogue_url': caturl || '/php/metadata/csw/',
+            status_manager_url: '/wwwlibs/statusmanager/index.php'
         });
 
         module.controller('Main', ['$scope', 'Core', 'hs.query.service_infopanel', 'hs.compositions.service_parser', 'config', '$cookies',
