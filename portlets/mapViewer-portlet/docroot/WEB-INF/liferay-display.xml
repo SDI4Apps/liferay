@@ -5,5 +5,6 @@
 
     <category name="Geoportal">
         <portlet id="mapViewer"></portlet>
+        <portlet id="mapViewer-custom"></portlet>
     </category>
 </display>

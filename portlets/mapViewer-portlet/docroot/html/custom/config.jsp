@@ -1,4 +1,4 @@
-<%@include file="/html/init.jsp"%>
+<%@include file="init.jsp"%>
 
 <div class="portlet-msg-info">
     <span class="displaying-article-id-holder "> Map Viewer
@@ -35,6 +35,11 @@
             <td><input width=10 type="text"
                 name="<portlet:namespace />zoom" value="<%=zoom%>" /></td>
             <td>Number</td>
+        </tr>
+        <tr>
+            <td>Map Config URL</td>
+            <td><input width 150 type="text" name="<portlet:namespace />mapconfig" value="<%=mapconfig%>" /></td>
+            <td>/js/config.js</td>
         </tr>
         <tr>
             <td colspan="2"><input type="button"
