@@ -34,9 +34,8 @@ if (iso3lang.equals("ces")){
 String iso2lang = themeDisplay.getLocale().getLanguage();
 %>
 
-<script src="/wwwlibs/hslayers/Lang/HSLayers-<%= iso3lang %>.js" type="text/javascript"></script>
+<script src="/layman-portlet/js/Lang/HSLayers-<%= iso3lang %>.js" type="text/javascript"></script>
 <script src="/wwwlibs/ext4/locale/ext-lang-<%= iso2lang %>.js" type="text/javascript"></script>
-<script src="/wwwlibs/ext/locale/ext-lang-<%= iso2lang %>.js" type="text/javascript"></script>
 <script src="/js/layman/lib/lang/layman-<%= iso3lang %>.js" type="text/javascript"></script>
 <%
 	String currentURL = PortalUtil.getCurrentURL(request);
