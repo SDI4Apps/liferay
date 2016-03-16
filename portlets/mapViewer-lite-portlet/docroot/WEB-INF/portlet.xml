@@ -36,7 +36,7 @@
     </portlet>
     <portlet>
         <portlet-name>mapViewer-lite-custom</portlet-name>
-        <display-name>Map Viewer Config</display-name>
+        <display-name>Map Viewer LITE Config</display-name>
         <portlet-class>
             com.liferay.util.bridges.mvc.MVCPortlet
         </portlet-class>
@@ -49,7 +49,7 @@
             <mime-type>text/html</mime-type>
         </supports>
         <portlet-info>
-            <title>Map Viewer Config</title>
+            <title>Map Viewer LITE Config</title>
             <short-title>mapViewer-config</short-title>
             <keywords></keywords>
         </portlet-info>
