@@ -139,6 +139,16 @@ div.navbar-header {
     padding-top: 63px;
 }
 
+@media ( max-width : 979px) {
+    .aui nav#navigation div.nav-collapse {
+        padding-top:5px;
+    }
+
+    .aui .nav-collapse .nav {
+        margin:0;
+    }
+}
+
 header#banner {
     background-color: #009ee0;
     border: 1px solid #0081b7;

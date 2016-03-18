@@ -51,48 +51,12 @@
 
 <body class="$css_class">
 
+<a href="#main-content" id="skip-to-content">#language ("skip-to-content")</a>
+
+$theme.include($body_top_include)
+
 <div id="hs-liferay-header">
-    $theme.include($body_top_include)
-    #if ($is_signed_in)
-        #dockbar()
-    #else
-        #set($companyLocalService = $serviceLocator.findService("com.liferay.portal.service.CompanyLocalService"))
-        #set($company = $companyLocalService.getCompany($company_id))
-        #set($portalURL = $company.getVirtualHostname())
-        #set ($create_account_url = $portletURLFactory.create($request, "58", $page.getPlid(), "ACTION_PHASE"))
-        $create_account_url.setWindowState("maximized")
-        $create_account_url.setPortletMode("view")
-        $create_account_url.setParameter("saveLastPath", "0")
-        $create_account_url.setParameter("struts_action", "/login/create_account")
-
-
-        <div class="portlet-boundary portlet-boundary_145_ portlet-static portlet-static-end portlet-borderless portlet-dockbar " id="p_p_id_145_">
-            <div class="navbar navbar-static-top dockbar" id="_145_dockbar" data-namespace="_145_">
-                <div class="navbar-inner">
-                    <div class="container">
-                        <div class="collapse nav-collapse" id="_145_navAccountControlsNavbarCollapse">
-                            <ul aria-label="Dockbar" class="nav nav-account-controls" id="_145_navAccountControls" role="menubar">
-                                <li class="register" role="presentation">
-                                    <a class="" data-redirect="true" href="$create_account_url" id="" role="menuitem" title="">
-                                        <span class="nav-item-label"> $languageUtil.get($locale, "Register") </span>
-                                    </a>
-                                </li>
-                                <li class="divider-vertical " id="whxm_" role="presentation"> </li>
-                                <li class="sign-in " id="ljla_" role="presentation">
-                                    <a class="" data-redirect="true" href="$sign_in_url" id="" role="menuitem" title="">
-                                        <i class="icon-user"></i>
-                                        <span class="nav-item-label"> $sign_in_text </span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <script type="text/javascript">AUI().use("liferay-dockbar",function(a){(function(){Liferay.Dockbar.init("#_145_dockbar");var b=a.all(".portlet-column-content.customizable");if(b.size()>0){b.get("parentNode").addClass("customizable")}})()});</script>
-        </div>
-    #end
-
+    #dockbar()
     #parse ("$full_templates_path/header.vm")
 </div>
 
