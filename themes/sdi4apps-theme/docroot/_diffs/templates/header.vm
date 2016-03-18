@@ -2,8 +2,15 @@
     <div id="heading">
         <div class="container-fluid">
 	        <div class="navbar-header">
+                <button type="button" class="btn btn-mobile navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-responsive-collapse"  aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                </button>
 	            <a class="navbar-brand" href="http://$portalURL/" title="$site_name" rel="home">
-	                <img src="$images_folder/sdi4apps_logo_web.png" alt="$site_name" />
+	                <img id="logo_normal" src="$images_folder/sdi4apps_logo_web.png" alt="$site_name" />
+                    <img id="logo_mini" src="$images_folder/sdi4apps_logo_web_mini.png" alt="$site_name" />
 	            </a>
 	        </div>
 		    #if ($has_navigation || $is_signed_in)

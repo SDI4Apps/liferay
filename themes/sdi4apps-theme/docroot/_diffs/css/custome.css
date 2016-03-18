@@ -1,12 +1,28 @@
+@media ( max-width : 767px) {
+    img#logo_normal {
+        display: none;
+    }
+    .aui body {
+        padding-left:0;
+        padding-right:0;
+    }
+}
+
+@media ( min-width : 768px) {
+    img#logo_mini {
+        display: none;
+    }
+}
+
 div#wrapper.no-border {
-    padding-top:0;
-    padding-bottom:0;
-    padding-right:0px;
-    padding-left:0px;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 0px;
+    padding-left: 0px;
 }
 
 div#wrapper.no-border div#content {
-    margin-top:0;
+    margin-top: 0;
 }
 
 .aui ul.ng-scope {
@@ -16,25 +32,28 @@ div#wrapper.no-border div#content {
 .aui nav#breadcrumbs {
     margin-bottom: 0px;
 }
+
 .aui ul.breadcrumb {
-    margin:0
+    margin: 0
 }
 
 .aui a {
-	color: #337ab7;
+    color: #337ab7;
 }
 
-.aui .nav-pills > .active > a, .aui .nav-pills > .active > a:hover, .aui .nav-pills > .active > a:focus {
+.aui .nav-pills>.active>a, .aui .nav-pills>.active>a:hover, .aui .nav-pills>.active>a:focus
+    {
     background-color: #337ab7;
 }
 
-.aui .nav-tabs > li > a, .aui .nav-pills > li > a {
-	line-height: 1.42857143;
+.aui .nav-tabs>li>a, .aui .nav-pills>li>a {
+    line-height: 1.42857143;
 }
 
 .portlet-dockbar .navbar {
-    min-height:46px;
+    min-height: 46px;
 }
+
 .aui .dockbar {
     background: #333;
     color: #fff;
@@ -50,19 +69,19 @@ div#wrapper.no-border div#content {
     background-image: none;
     border-bottom: none;
     box-shadow: none;
-/*    padding-left: 15px;
+    /*    padding-left: 15px;
     padding-right: 15px;*/
     -webkit-box-shadow: none;
 }
 
-.aui .navbar .nav > li > a {
+.aui .navbar .nav>li>a {
     color: #fff;
     text-shadow: none;
 }
 
-.aui .navbar .nav > li > a:focus, .aui .navbar .nav > li > a:hover {
+.aui .navbar .nav>li>a:focus, .aui .navbar .nav>li>a:hover {
     color: #fff;
-    text-decoration:underline;
+    text-decoration: underline;
 }
 
 .aui .navbar .divider-vertical {
@@ -73,31 +92,33 @@ div#wrapper.no-border div#content {
 }
 
 .aui ul.dropdown-menu {
-    margin:0;
-    padding:5px;
+    margin: 0;
+    padding: 5px;
 }
+
 ul.nav-account-controls {
     margin: 0;
     padding: 2px 0;
 }
 
-.aui .navbar .nav > li > a.user-notification-link {
+.aui .navbar .nav>li>a.user-notification-link {
     background-color: #0066B3;
     padding: 5px 10px;
     color: #fff;
     text-shadow: 0 1px 0 #555555;
 }
 
-.aui .navbar .nav > .active > a, .aui .navbar .nav > .active > a:hover, .aui .navbar .nav > .active > a:focus {
+.aui .navbar .nav>.active>a, .aui .navbar .nav>.active>a:hover, .aui .navbar .nav>.active>a:focus
+    {
     background-color: #0066B3;
     color: #fff;
-    text-shadow:none;
+    text-shadow: none;
 }
 
 .aui .navbar {
-    margin-bottom:0;
-    -webkit-box-shadow:none;
-    box-shadow:none;
+    margin-bottom: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
     min-height: auto;
 }
 
@@ -107,15 +128,17 @@ div.navbar-header {
 }
 
 .aui nav#navigation div.navbar-inner {
-    background-color:transparent;
-    background-image:none;
+    background-color: transparent;
+    background-image: none;
     border: none;
-    box-shadow:none;
+    box-shadow: none;
     padding-right: 0;
 }
+
 .aui nav#navigation div.nav-collapse {
-    padding-top:63px;
+    padding-top: 63px;
 }
+
 header#banner {
     background-color: #009ee0;
     border: 1px solid #0081b7;
@@ -127,7 +150,7 @@ div#heading {
     padding: 10px 0;
 }
 
-div#heading > div.container-fluid {
+div#heading>div.container-fluid {
     padding-left: 0;
     padding-right: 0;
 }
@@ -136,36 +159,40 @@ div#content {
     margin-top: 10px;
 }
 
-div#content > form#hrefFm {
-    margin:0;
+div#content>form#hrefFm {
+    margin: 0;
 }
+
 div#content .portlet-borderless-bar {
     z-index: 1001;
 }
+
 header#banner .collapse, div.portlet-dockbar .collapse {
-    display:block;
-    visibility:visible;
+    display: block;
+    visibility: visible;
 }
 
 header#banner .container, div.portlet-dockbar .container {
-    padding-left:0;
-    padding-right:0;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 header#banner .navbar-brand {
-    float:none;
-    height:auto;
+    float: none;
+    height: auto;
     padding: 0;
     font-size: 14px;
 }
+
 .aui .modal.modal-hidden {
     display: none;
 }
+
 .aui .modal {
-    display:inline
+    display: inline
 }
 
-@media (max-width: 979px) {
+@media ( max-width : 979px) {
     .aui div.nav-collapse, .aui div.nav-collapse.collapse {
         height: auto;
     }
@@ -175,11 +202,11 @@ header#banner .navbar-brand {
 }
 
 .aui div.row.gui-overlay {
-    margin-left:0;
+    margin-left: 0;
 }
 
-@media (min-width: 1200px) {
+@media ( min-width : 1200px) {
     .aui div.row.gui-overlay {
-        margin-left:0;
+        margin-left: 0;
     }
 }
