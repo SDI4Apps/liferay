@@ -1,13 +1,13 @@
-div.ol-control button{
+div.ol-control button {
     background: initial;
     background-image: none;
     background-color: #7b98bc;
-    background-color: rgba(0,60,136,.5);
+    background-color: rgba(0, 60, 136, .5);
     text-shadow: none;
 }
 
 div.ng-scope #toolbar button:hover {
-    background-image:none;
+    background-image: none;
 }
 
 div.ol-zoom {
@@ -29,52 +29,68 @@ input#search_address {
 }
 
 div.panelspace {
-    box-shadow:none;
+    box-shadow: none;
 }
 
-.aui .ng-scope {
+.aui .ng-scope { * {
+    line-height: 1.42857143;
+}
 
-    ul, ol {
-       margin: initial;
-    }
+ul, ol {
+    margin: initial;
+}
 
-    a.sidebar-main {
-       padding:0;
-    }
+a.sidebar-main {
+    padding: 0;
+}
 
-    ul.hs-lm-baselayerlist {
-        margin-bottom: 0;
-    }
+ul.hs-lm-baselayerlist {
+    margin-bottom: 0;
+}
 
-    .hs-dataset-panel .panel-body {
-        padding: 0;
-    }
+.hs-dataset-panel .panel-body {
+    padding: 0;
+}
 
-[class^="icon-"], [class*=" icon-"] {font-family:'WebHostingHub-Glyphs';background:none;width:auto;height:auto;font-style:normal}
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'WebHostingHub-Glyphs';
+    background: none;
+    width: auto;
+    height: auto;
+    font-style: normal
+}
 
-    .icon-refresh:before {
-        content: '\f078';
-    }
+.icon-refresh:before {
+    content: '\f078';
+}
 
-    .icon-link:before {
-        content: '\f022';
-    }
+.icon-link:before {
+    content: '\f022';
+}
 
-    .modal {
-        margin-left:0;
-        background-color: initial;
-        width: auto;
-    }
+.modal {
+    margin-left: 0;
+    background-color: initial;
+    width: auto;
+}
 
-    .close {
-        font-size: 20px;
-    }
+.close {
+    font-size: 20px;
+}
 
-    .mainpanel {
-        border: initial;
-        margin-bottom:0;
-    }
-    .sidebar-list {
-        border-radius: initial;
-    }
+.mainpanel {
+    border: initial;
+    margin-bottom: 0;
+}
+
+.sidebar-list {
+    border-radius: initial;
+}
+
+.ol-control button {
+    color: white;
+    font-size: 1.14em;
+    font-weight: bold;
+    margin: 1px;
+}
 }

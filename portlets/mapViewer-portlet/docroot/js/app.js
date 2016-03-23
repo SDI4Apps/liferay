@@ -28,7 +28,7 @@ define(['angular', 'ol', 'toolbar', 'layermanager', 'sidebar', 'map', 'ows', 'qu
                         $("html").css('overflow', 'hidden');
                         var el = $(element[0]);
                         var windowHeight = $(window).height();
-                        var headerHeight = $('#hs-liferay-header').outerHeight() + 11;
+                        var headerHeight = $('#hs-liferay-header').outerHeight();
                         var elementHeight = windowHeight - headerHeight;
                         el.height(elementHeight);
                         $("#map").height(elementHeight);
