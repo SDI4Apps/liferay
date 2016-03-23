@@ -1,0 +1,61 @@
+.aui.x4-strict {
+	 input[disabled], select[disabled], textarea[disabled], input[readonly], select[readonly], textarea[readonly] {
+	   background-color: white;
+	 }
+	 
+	 .x4-form-text {
+	   height: 22px;
+	   padding: 1px 3px 2px 3px;
+	 }
+	
+	.x4-form-textarea {
+	   height: auto;
+	}
+	
+	select,  textarea,  input[type="text"],  input[type="password"],  input[type="datetime"],  input[type="datetime-local"],  input[type="date"],  input[type="month"],  input[type="time"],  input[type="week"],  input[type="number"],  input[type="email"],  input[type="url"],  input[type="search"],  input[type="tel"],  input[type="color"],  .uneditable-input {
+	   margin-bottom: 0;
+	}
+	
+	.x4-form-item, .x4-form-field {
+	   font-size: 12px;
+	   font-family: tahoma, arial, verdana, sans-serif;
+	}
+	
+	.x4-form-item-label {
+	   font: normal 12px/14px tahoma,arial,verdana,sans-serif;
+	}
+	
+	.x4-tool-img {
+	   vertical-align: baseline;
+	}
+	
+	.x4-layer {
+	   font-size: 12px;
+	}
+	
+	.x4-list-plain {
+	   margin:0;
+	}
+	
+	.x4-form-checkbox {
+	   width: 13px;
+	}
+	
+	.x4-form-cb-label {
+	   display:inline-block;
+	   font: normal 12px/14px tahoma,arial,verdana,sans-serif;
+	   margin-bottom:0;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

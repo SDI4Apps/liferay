@@ -41,7 +41,8 @@ var init = function() {
         renderTo: "data",
         showCkan: false,
         showFiles: true,
-        showData: false
+        showData: true,
+        secureLayer: false
         });
 
 };
