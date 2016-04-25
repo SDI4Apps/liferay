@@ -93,4 +93,14 @@ ul.hs-lm-baselayerlist {
     font-weight: bold;
     margin: 1px;
 }
+
+.hs-panel-margin .form-horizontal .form-group {
+    margin-left:0;
+    margin-right:0;
+}
+
+hr {
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
 }
