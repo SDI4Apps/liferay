@@ -59,3 +59,14 @@ div.olControlScale {
 .x-btn-icon .magnify {
     background-image: url(../img/magnifier.png);
 }
+
+/* when replacing tiles, do not show tile and backbuffer at the same time */
+.olTileReplacing {
+    display: none;
+}
+
+/* override any max-width image settings (e.g. bootstrap.css) */
+img.olTileImage {
+    max-width: none;
+}
+
