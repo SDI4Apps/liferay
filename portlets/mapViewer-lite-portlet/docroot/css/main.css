@@ -103,4 +103,9 @@ hr {
     margin-top: 0px;
     margin-bottom: 5px;
 }
+
+i.hs-lm-warning-scale, i.hs-lm-queryable {
+	top: 2px;
+	line-height: 1.5
+}
 }
