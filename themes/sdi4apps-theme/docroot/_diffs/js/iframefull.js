@@ -23,7 +23,7 @@ function fullresize() {
         var contDiv = $('iframe').parent();
         var width = $('#content').width();
         var windowHeight = $(window).height();
-        var headerHeight = $('.portlet-dockbar').outerHeight() + $('.breadcrumbs').outerHeight() + $('#header').outerHeight() + 10;
+        var headerHeight = $('#hs-liferay-header').outerHeight() + 1;
         var iframeHeight = windowHeight - headerHeight;
         contDiv.height(iframeHeight);
         iframe.height(iframeHeight);
