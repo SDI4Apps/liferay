@@ -67,6 +67,9 @@ define(['angular', 'ol', 'toolbar', 'layermanager', 'sidebar', 'map', 'ows', 'qu
                 zoom: MAPzoom,
                 units: "m"
             }),
+            hostname: {
+                "default": window.location.origin
+            },
             datasources: [{
                 title: "Catalogue",
                 url: "/php/metadata/csw/",
@@ -86,8 +89,6 @@ define(['angular', 'ol', 'toolbar', 'layermanager', 'sidebar', 'map', 'ows', 'qu
                 $scope.Core = Core;
                 Core.sidebarRight = false;
                 Core.singleDatasources = true;
-                Core.embededEnabled = false;
-                $('.lfr-admin-panel').wrap("<div class='aui'></div>");
                 hslayers_api.gui.setLanguage($cookies.get('GUEST_LANGUAGE_ID'));
                 $scope.$on('infopanel.updated', function(event) {
                     if (console) console.log('Attributes', InfoPanelService.attributes, 'Groups', InfoPanelService.groups);
