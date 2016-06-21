@@ -10,9 +10,9 @@ var gitsha = $.ajax({
 require.config({
     urlArgs: 'bust=' + gitsha,
     paths: {
-        ol: hsl_path + 'node_modules/openlayers/dist/ol-debug',
         app: '/mapViewer-portlet/js/app',
-        core: hsl_path + 'components/core/core'
+        core: hsl_path + 'components/core/core',
+        ol: hsl_path + 'node_modules/openlayers/dist/ol-debug'
     },
     shim: {
         d3: {
@@ -20,6 +20,10 @@ require.config({
         },
         dc: {
             deps: ['d3', 'crossfilter']
+        },
+        s4a: {
+            deps: ['ol', 'dc'],
+            exports: 's4a'
         }
     }
 });
