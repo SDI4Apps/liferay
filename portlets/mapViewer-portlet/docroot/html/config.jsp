@@ -16,7 +16,7 @@
             <td>Catalogue URL</td>
             <td><input width=150 type="text"
                 name="<portlet:namespace />caturl" value="<%=caturl%>" /></td>
-            <td>http://liferay.local/php/metadata/csw/index.php</td>
+            <td>/php/metadata/csw/index.php</td>
         </tr>
         <tr>
             <td>Longitude</td>
@@ -36,6 +36,14 @@
                 name="<portlet:namespace />zoom" value="<%=zoom%>" /></td>
             <td>Number</td>
         </tr>
+
+        <tr>
+            <td>Hostname</td>
+            <td><input width=30 type="text"
+                name="<portlet:namespace />domain" value="<%=domain%>" /></td>
+            <td>Domain of portal</td>
+        </tr>
+
         <tr>
             <td colspan="2"><input type="button"
                 value="<liferay-ui:message key="save" />"
